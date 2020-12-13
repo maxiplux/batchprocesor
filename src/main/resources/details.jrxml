@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="details" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="109b38f7-74eb-4fe0-b5ca-0dd35d0a1ebf">
+
+    <field name="orderNumber" class="java.lang.Integer">
+
+    </field>
+    <field name="productCode" class="java.lang.String">
+
+    </field>
+    <field name="quantityOrdered" class="java.lang.Integer">
+
+    </field>
+    <field name="priceEach" class="java.math.BigDecimal">
+
+    </field>
+    <field name="orderLineNumber" class="java.lang.Integer">
+
+    </field>
+    <field name="productName" class="java.lang.String">
+
+    </field>
+    <field name="productLine" class="java.lang.String">
+
+    </field>
+    <field name="productScale" class="java.lang.String">
+
+    </field>
+    <field name="productVendor" class="java.lang.String">
+
+    </field>
+    <field name="productDescription" class="java.lang.String">
+
+    </field>
+    <group name="orderNumber">
+        <groupExpression><![CDATA[$F{orderNumber}]]></groupExpression>
+    </group>
+    <group name="productCode">
+        <groupExpression><![CDATA[$F{productCode}]]></groupExpression>
+    </group>
+    <group name="quantityOrdered">
+        <groupExpression><![CDATA[$F{quantityOrdered}]]></groupExpression>
+    </group>
+    <group name="priceEach">
+        <groupExpression><![CDATA[$F{priceEach}]]></groupExpression>
+    </group>
+    <group name="orderLineNumber">
+        <groupExpression><![CDATA[$F{orderLineNumber}]]></groupExpression>
+    </group>
+    <group name="productName">
+        <groupExpression><![CDATA[$F{productName}]]></groupExpression>
+    </group>
+    <group name="productLine">
+        <groupExpression><![CDATA[$F{productLine}]]></groupExpression>
+    </group>
+    <group name="productScale">
+        <groupExpression><![CDATA[$F{productScale}]]></groupExpression>
+    </group>
+    <group name="productVendor">
+        <groupExpression><![CDATA[$F{productVendor}]]></groupExpression>
+    </group>
+    <group name="productDescription">
+        <groupExpression><![CDATA[$F{productDescription}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <detail>
+        <band height="20" splitType="Prevent">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+            <textField>
+                <reportElement x="0" y="0" width="93" height="20" uuid="aaae608d-c3a4-4377-b760-dc1b1fa286d6">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="811570b8-ef6d-4149-be15-691cb6cc0e61"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{productCode}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="93" y="0" width="93" height="20" uuid="145cccaf-63af-4fc1-b28b-132a1a6c3be4">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0a457c4a-4035-47b9-a1b6-3d2afa090c80"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{quantityOrdered}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="186" y="0" width="93" height="20" uuid="bf4b5668-32b5-457c-9e55-8a428a45c397">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="039269b1-0711-457a-913f-f7f8a2dae46d"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{priceEach}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="279" y="0" width="92" height="20" uuid="24c6f1c7-5b96-4f41-b378-2b0eecfeccf6">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d12fbeb2-46a5-4c62-bc7a-ef2321cedb2a"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{orderLineNumber}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="371" y="0" width="92" height="20" uuid="a4093918-3670-4e80-b456-815011970a85">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e1bce895-da7f-45a8-95ea-453ee205ec89"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="463" y="0" width="92" height="20" uuid="4e7298f6-61b1-4af4-bb04-42b6a2c780ab">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bf7c323-d91d-4d0d-8817-0a596026bba2"/>
+                </reportElement>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{productLine}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

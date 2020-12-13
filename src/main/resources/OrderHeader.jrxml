@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ORDENDETAILS" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d4b7fb1-e76a-4179-aa9d-4bad35ee2711">
+
+
+    <field name="orderNumber" class="java.lang.Integer">
+
+    </field>
+    <field name="customerName" class="java.lang.String">
+
+    </field>
+    <field name="contactLastName" class="java.lang.String">
+
+    </field>
+    <field name="contactFirstName" class="java.lang.String">
+
+    </field>
+    <field name="phone" class="java.lang.String">
+
+    </field>
+    <field name="addressLine1" class="java.lang.String">
+
+    </field>
+    <field name="addressLine2" class="java.lang.String">
+
+    </field>
+    <field name="city" class="java.lang.String">
+
+    </field>
+    <field name="state" class="java.lang.String">
+
+    </field>
+    <field name="postalCode" class="java.lang.String">
+
+    </field>
+    <field name="country" class="java.lang.String">
+
+    </field>
+    <field name="salesRepEmployeeNumber" class="java.lang.Integer">
+
+    </field>
+    <field name="orderDate" class="java.sql.Date">
+
+    </field>
+    <field name="requiredDate" class="java.sql.Date">
+
+    </field>
+    <field name="shippedDate" class="java.sql.Date">
+
+    </field>
+    <field name="status" class="java.lang.String">
+
+    </field>
+    <group name="orderNumber">
+        <groupExpression><![CDATA[$F{orderNumber}]]></groupExpression>
+    </group>
+    <group name="customerName">
+        <groupExpression><![CDATA[$F{customerName}]]></groupExpression>
+    </group>
+    <group name="contactLastName">
+        <groupExpression><![CDATA[$F{contactLastName}]]></groupExpression>
+    </group>
+    <group name="contactFirstName">
+        <groupExpression><![CDATA[$F{contactFirstName}]]></groupExpression>
+    </group>
+    <group name="phone">
+        <groupExpression><![CDATA[$F{phone}]]></groupExpression>
+    </group>
+    <group name="addressLine1">
+        <groupExpression><![CDATA[$F{addressLine1}]]></groupExpression>
+    </group>
+    <group name="addressLine2">
+        <groupExpression><![CDATA[$F{addressLine2}]]></groupExpression>
+    </group>
+    <group name="city">
+        <groupExpression><![CDATA[$F{city}]]></groupExpression>
+    </group>
+    <group name="state">
+        <groupExpression><![CDATA[$F{state}]]></groupExpression>
+    </group>
+    <group name="postalCode">
+        <groupExpression><![CDATA[$F{postalCode}]]></groupExpression>
+    </group>
+    <group name="country">
+        <groupExpression><![CDATA[$F{country}]]></groupExpression>
+    </group>
+    <group name="salesRepEmployeeNumber">
+        <groupExpression><![CDATA[$F{salesRepEmployeeNumber}]]></groupExpression>
+    </group>
+    <group name="orderDate">
+        <groupExpression><![CDATA[$F{orderDate}]]></groupExpression>
+    </group>
+    <group name="requiredDate">
+        <groupExpression><![CDATA[$F{requiredDate}]]></groupExpression>
+    </group>
+    <group name="shippedDate">
+        <groupExpression><![CDATA[$F{shippedDate}]]></groupExpression>
+    </group>
+    <group name="status">
+        <groupExpression><![CDATA[$F{status}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="70" splitType="Stretch">
+            <staticText>
+                <reportElement x="360" y="20" width="100" height="30" uuid="f197ebb2-49ff-4d30-9ed9-5cb6aa38f5f5"/>
+                <text><![CDATA[Orden de compra]]></text>
+            </staticText>
+            <textField pattern="MMMMM dd, yyyy">
+                <reportElement x="720" y="10" width="100" height="30" uuid="307b32f0-7149-4ec9-b2a4-006cf43b2eed"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="30" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="40" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <staticText>
+                <reportElement x="70" y="-30" width="137" height="30" uuid="fc231aef-3fdd-400b-98fa-4facb97a7477">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8321c07-7e5d-437f-a371-3f87fda6cf62"/>
+                </reportElement>
+                <text><![CDATA[Numero de orden]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="207" y="-30" width="133" height="30" uuid="99e5477a-ef5a-474a-961b-c6de14c903de">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="972449a1-d8f4-4eb4-b3ba-b7e0db28fce9"/>
+                </reportElement>
+                <text><![CDATA[Firts Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="340" y="-30" width="133" height="30" uuid="cee6c685-e8bd-4b48-8264-74f9ebe40c44">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1087397-5015-4fa4-883c-904a2ed10613"/>
+                </reportElement>
+                <text><![CDATA[Last name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="460" y="-30" width="133" height="30" uuid="ff0a2959-4115-49e5-9766-71b6d8557a56">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e3ad6c0-f182-4a30-9c6b-9dfa970a44e7"/>
+                </reportElement>
+                <text><![CDATA[Fecha]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="590" y="-30" width="133" height="30" uuid="dc1c04b4-d4e6-4e8c-97aa-670c67df7935">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a42e242b-7298-4c71-8bda-1faedb632e85"/>
+                </reportElement>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="209" splitType="Stretch">
+            <textField>
+                <reportElement x="207" y="-30" width="133" height="30" uuid="380c6711-bb2c-4b57-95ad-627be5f06fd1">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="972449a1-d8f4-4eb4-b3ba-b7e0db28fce9"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="340" y="-30" width="133" height="30" uuid="97ea55e1-5b8b-40da-abb4-bb4040750c6b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1087397-5015-4fa4-883c-904a2ed10613"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{contactLastName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="450" y="-30" width="133" height="20" uuid="6bf9d5a1-1320-444b-80e9-5a697010559b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e3ad6c0-f182-4a30-9c6b-9dfa970a44e7"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{orderDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="70" y="-30" width="137" height="30" uuid="1272a31a-1bfb-4d1f-bc0e-b0557a88c967">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8321c07-7e5d-437f-a371-3f87fda6cf62"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{orderNumber}]]></textFieldExpression>
+            </textField>
+            <subreport>
+                <reportElement x="80" y="40" width="565" height="80" printWhenGroupChanges="orderNumber" uuid="2155a2ca-9a97-48d2-8ec3-16ff75f29457"/>
+
+                <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                <subreportExpression><![CDATA["details.jasper"]]></subreportExpression>
+            </subreport>
+            <textField>
+                <reportElement x="583" y="-35" width="87" height="25" uuid="9e20799a-d3f1-438a-85eb-04d790b3f75d">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a42e242b-7298-4c71-8bda-1faedb632e85"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="80" y="20" width="71" height="14" uuid="cca3d63f-cc90-4fe2-b56c-32aeb0a945a5"/>
+                <text><![CDATA[Static Text]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="190" y="20" width="71" height="14" uuid="18031732-4e51-4cfb-a8a9-1c44e721950e"/>
+                <text><![CDATA[Static Text]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="480" y="20" width="71" height="14" uuid="c7aaadd6-e11e-424f-82ed-87eb25c22f16"/>
+                <text><![CDATA[Static Text]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="290" y="20" width="71" height="14" uuid="5767bb86-9b08-491b-a198-8d7dd50a2e39"/>
+                <text><![CDATA[Static Text]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="20" width="71" height="14" uuid="b6d533d9-b740-45c6-8751-27a89418bcb4"/>
+                <text><![CDATA[Static Text]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="59" splitType="Stretch">
+            <textField>
+                <reportElement x="729" y="29" width="100" height="30" uuid="c1dbfee5-7986-4b6e-95fa-aeb78c3ad13d"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

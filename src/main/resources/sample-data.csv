@@ -1,5 +1,4 @@
-Jill,Doe
-Joe,Doe
-Justin,Doe
-Jane,Doe
-John,Doe
+select `orders`.`orderNumber` AS `orderNumber`,`customers`.`customerNumber` AS `customerNumber`,`customers`.`customerName` AS `customerName`,`customers`.`contactLastName` AS `contactLastName`,`customers`.`contactFirstName` AS `contactFirstName`,`customers`.`phone` AS `phone`,`customers`.`addressLine1` AS `addressLine1`,`customers`.`addressLine2` AS `addressLine2`,`customers`.`city` AS `city`,`customers`.`state` AS `state`,`customers`.`postalCode` AS `postalCode`,`customers`.`country` AS `country`,`customers`.`salesRepEmployeeNumber` AS `salesRepEmployeeNumber`,`customers`.`creditLimit` AS `creditLimit`,`orders`.`orderDate` AS `orderDate`,`orders`.`requiredDate` AS `requiredDate`,`orders`.`shippedDate` AS `shippedDate`,`orders`.`status` AS `status`,`orders`.`comments` AS `comments` from (`orders` join `customers` on((`orders`.`customerNumber` = `customers`.`customerNumber`)))
+
+
+select `products`.`productName` AS `productName`,`products`.`productCode` AS `productCode`,`products`.`productLine` AS `productLine`,`products`.`productScale` AS `productScale`,`products`.`productVendor` AS `productVendor`,`products`.`productDescription` AS `productDescription`,`products`.`quantityInStock` AS `quantityInStock`,`products`.`buyPrice` AS `buyPrice`,`products`.`MSRP` AS `MSRP`,`orderdetails`.`quantityOrdered` AS `quantityOrdered`,`orderdetails`.`priceEach` AS `priceEach`,`orderdetails`.`orderLineNumber` AS `orderLineNumber`,`orderdetails`.`orderNumber` AS `orderNumber` from (`orderdetails` join `products` on((`orderdetails`.`productCode` = `products`.`productCode`)))

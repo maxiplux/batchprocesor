@@ -1,0 +1,7 @@
+jdbcSettings:
+  url: "jdbc:mysql://localhost:3306/shopping"
+  username: "shopping"
+  password: "shopping"
+  driverClassName: "com.mysql.jdbc.Driver"
+
+packageName: "springbatch.batchprocesor.model"
