@@ -4,7 +4,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.batch.item.ItemProcessor;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.ResourceUtils;
 import springbatch.batchprocesor.model.Person;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
@@ -12,14 +19,28 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
     @Override
     public Person process(final Person person) throws Exception {
-        final String firstName = person.getFirstName().toUpperCase();
-        final String lastName = person.getLastName().toUpperCase();
 
-        final Person transformedPerson = new Person(firstName, lastName);
+        person.setFileData(this.getFileData());
 
-        log.info("Converting (" + person + ") into (" + transformedPerson + ")");
+        log.info("Converting (" + person + ") into (" + person + ")");
 
-        return transformedPerson;
+        return person;
+    }
+
+    private byte[] getFileData() {
+
+        try {
+            log.info(" Reading file content from getFileData ");
+            File file = ResourceUtils.getFile("classpath:review.pdf");
+
+            return  Files.readAllBytes(file.toPath());
+        }
+        catch (IOException e) {
+            log.error("getFileData {}", e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+
     }
 
 }

@@ -1,37 +1,36 @@
 package springbatch.batchprocesor.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Arrays;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Person {
 
     private String lastName;
     private String firstName;
 
-    public Person() {
-    }
 
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    private byte[] fileData;
 
     @Override
     public String toString() {
         return "firstName: " + firstName + ", lastName: " + lastName;
     }
+
+    public Byte[] getFileAsBinaryArray(){
+
+        Byte[] bytes = new Byte[this.fileData.length];
+        Arrays.setAll(bytes, n -> this.fileData[n]);
+        return bytes;
+
+    }
+
+
 
 }
